@@ -1,0 +1,15 @@
+/* 
+    Created on : Dec 12, 2018, 1:28:42 PM
+    Author     : paulbratslavsky
+*/
+
+.site-content {
+    background: blue;
+    padding: 1rem;
+    
+    @media screen and ( min-width: $query__small ) {
+        padding: 2rem;
+        background: pink;
+    }
+}
+
