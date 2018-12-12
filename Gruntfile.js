@@ -8,10 +8,11 @@ module.exports = (grunt) => {
         sass: {
             dev: {
                 options: {
-                    style: 'expanded'  
+                    style: 'expanded' , 
                 },
                 files: {
-                    'compiled/style.css': 'sass/style.scss'
+                    'compiled/style.css': 'sass/style.scss',
+                    'style.css': 'sass/style.scss',
                 }
             },
             dist: {
@@ -19,7 +20,8 @@ module.exports = (grunt) => {
                     style: 'compressed'   
                 },
                 files: {
-                    'compiled/style-min.css': 'sass/style.scss'
+                    'compiled/style-min.css': 'sass/style.scss',
+                    'compiled/style.css': 'sass/style.scss',
                 }
             }
         },
@@ -28,10 +30,10 @@ module.exports = (grunt) => {
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['sass','autoprefixer']
+                tasks: ['sass',/*'autoprefixer'*/]
             }
         },
-
+/*
         // AUTO PREFIXER 
         autoprefixer: {
             options: {
@@ -45,7 +47,7 @@ module.exports = (grunt) => {
                 dest: ''
             }
         },
-
+*/
         // BROWSER SYNC TASK
         browserSync: {
             dev: {
@@ -53,6 +55,7 @@ module.exports = (grunt) => {
                     src : [
                         '**/*.css',
                         '**/*.html',
+                        '**/*php',
                     ]
                 },
                 options: {
@@ -68,7 +71,7 @@ module.exports = (grunt) => {
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    //grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.registerTask('default', ['browserSync','watch']);
 }

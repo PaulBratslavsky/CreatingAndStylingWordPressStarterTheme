@@ -540,7 +540,7 @@ img {
 }
 
 figure {
-  margin: 1em 0;
+  margin: 0;
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -733,14 +733,29 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
+## Header Menu
+--------------------------------------------------------------*/
+/* Header Menu */
+#primary-menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+#primary-menu li {
+  padding: 0 0.5rem;
+}
+#primary-menu li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -755,8 +770,7 @@ a:hover, a:active {
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
+  clip-path: none;
   color: #21759b;
   display: block;
   font-size: 19.25px;
@@ -850,6 +864,76 @@ a:hover, a:active {
   }
 }
 
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.header-image img {
+  display: block;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.site-header {
+  position: relative;
+  padding: 1em;
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+  background-color: blue;
+}
+@media screen and (min-width: 600px) {
+  .site-header {
+    padding: 1em 2em;
+  }
+}
+
+.site-branding {
+  min-height: 65px;
+}
+
+.custom-logo-link img {
+  display: block;
+  height: 65px;
+  width: auto;
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-weight: 900;
+  line-height: 1em;
+}
+.site-title a {
+  color: white;
+  text-decoration: none;
+}
+.site-title a:hover, .site-title a:focus {
+  text-decoration: underline;
+}
+
+.site-description {
+  margin: 0;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 980px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-branding {
+    width: 35%;
+  }
+
+  .site-navigation {
+    width: 55%;
+  }
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -999,3 +1083,5 @@ object {
 .gallery-caption {
   display: block;
 }
+
+/*# sourceMappingURL=style.css.map */
