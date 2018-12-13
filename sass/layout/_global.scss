@@ -4,12 +4,10 @@
 */
 
 .site-content {
-    background: blue;
     padding: 1rem;
     
     @media screen and ( min-width: $query__small ) {
         padding: 2rem;
-        background: pink;
     }
 }
 

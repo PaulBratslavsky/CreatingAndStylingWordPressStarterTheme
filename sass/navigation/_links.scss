@@ -1,13 +1,13 @@
-a {
-	color: $color__link;
+.main-navigation a {
+	color: $color__link__menu;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color__link-visited__menu;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color__link-hover__menu;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -16,4 +16,28 @@ a {
 	&:active {
 		outline: 0;
 	}
+}
+
+.site-content a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+
+		&:focus {
+			outline: thin dotted;
+		}
+
+		&:hover,
+		&:active {
+			outline: 0;
+		}
+	}
+
 }

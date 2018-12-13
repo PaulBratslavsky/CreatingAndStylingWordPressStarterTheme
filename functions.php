@@ -45,6 +45,7 @@ if ( ! function_exists( 'underscoresass_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'underscoresass' ),
+            'menu-2' => esc_html__( 'Social', 'underscoresass' )
 		) );
 
 		/*
@@ -76,8 +77,8 @@ if ( ! function_exists( 'underscoresass_setup' ) ) :
 		add_theme_support( 'custom-logo', array(
 			'height'      => 250,
 			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			//'flex-width'  => true,
+			//'flex-height' => true,
 		) );
 	}
 endif;

@@ -1,0 +1,63 @@
+// Mobile Nav
+.main-navigation {
+  display: flex;
+}
+
+@media screen and ( max-width: 599px ) {
+  .main-navigation.toggled {
+    position: fixed;
+    // display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: #000e14;
+    // opacity: 0.85;
+    height: 100vh;
+    width: 100vw;
+
+    button {
+      margin: 21px 0;
+      button:focus {outline:0;}
+    }
+
+
+    div {
+      height: 100%;
+      width: 100%;
+      background: #304151;
+
+      ul#primary-menu {
+        display: flex;
+        flex-direction: column;
+
+        li {
+          width: 100%;
+
+          a {
+            font-size: 2rem;
+            // background: red;
+            width: 100%;
+            text-align: center;
+            padding: 0.5rem 0;
+            margin: 3px 0;
+          }
+
+          a:hover {
+            background: #597693;
+          }
+
+        }
+
+        li ul.sub-menu {
+          display: none;
+        }
+      }
+
+
+    }
+
+
+  }
+}
+
