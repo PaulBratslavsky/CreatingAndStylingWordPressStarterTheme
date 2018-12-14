@@ -6,6 +6,7 @@
  *
  * @package Starter_Theme
  */
+echo "This is from content-page.php to display page";
 
 ?>
 

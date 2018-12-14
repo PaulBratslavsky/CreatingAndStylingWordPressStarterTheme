@@ -6,7 +6,7 @@
  *
  * @package Starter_Theme
  */
-
+echo "This is from content-none.php this displays when no content found";
 ?>
 
 <section class="no-results not-found">

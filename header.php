@@ -23,9 +23,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscoresass' ); ?></a>
+
         <?php if ( get_header_image() && is_front_page() ) : ?>
             <figure class="header-image"><?php the_header_image_tag(); ?></figure>
         <?php endif; ?>
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 
@@ -43,7 +45,9 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$underscoresass_description = get_bloginfo( 'description', 'display' );
+
+            $underscoresass_description = get_bloginfo( 'description', 'display' );
+
 			if ( $underscoresass_description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo $underscoresass_description; /* WPCS: xss ok. */ ?></p>
