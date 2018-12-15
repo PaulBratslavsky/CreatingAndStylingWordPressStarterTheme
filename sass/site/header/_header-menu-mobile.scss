@@ -11,7 +11,7 @@
     align-items: center;
     top: 0;
     left: 0;
-    background: #000e14;
+    background: #334150;
     // opacity: 0.85;
     height: 100vh;
     width: 100vw;
@@ -26,7 +26,7 @@
     div {
       height: 100%;
       width: 100%;
-      background: #304151;
+      background: rgba(48, 65, 81, 0.82);
 
       ul#primary-menu {
         display: flex;
@@ -35,17 +35,23 @@
         li {
           width: 100%;
 
+          padding: 0.275rem 1rem;
+
           a {
             font-size: 2rem;
-            // background: red;
+            color: #fafafa;
+            background: #db5461;
             width: 100%;
             text-align: center;
             padding: 0.5rem 0;
             margin: 3px 0;
+
+            border-radius: 5px;
           }
 
           a:hover {
-            background: #597693;
+            background: #fafafa;
+            color: #db5461;
           }
 
         }

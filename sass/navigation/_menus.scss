@@ -1,5 +1,5 @@
 
-
+/*
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -8,15 +8,54 @@
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
+}
+*/
+
+.nav-links {
+	display: flex;
+	flex-direction: row;
+
+	min-height: 150px;
+
+	background: #324150;
+
+	a {
+		text-decoration: none;
+		color: #393e41;
+		font-weight: 700;
+
+		display: flex;
+		flex-direction: column;
+
+
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		height: 100%;
+
+		padding: 1rem;
+
+		text-align: center;
+
+
+	}
 
 	.nav-previous {
-		float: left;
+
+		background: #db5461;
 		width: 50%;
+
+
+
+
 	}
 
 	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
+
+		background: #e2c044;
+		width: 50%
+
+
 	}
 }

@@ -19,7 +19,10 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+			// the_post_navigation();
+            // User defined function start
+            underscoresass_post_navigation();
+            // User defined function end
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

@@ -9,15 +9,7 @@
 
     article {
       background: #334150;
-      padding: 1rem;
-      margin: 1rem;
-
-      border-radius: 5px;
-
-      // flex: 1;
-      // min-width: 320px;
-      // max-height: 740px;
-      // overflow: hidden;
+      margin-bottom: 0;
 
       .entry-header {
 
@@ -31,10 +23,12 @@
           display: flex;
           flex-wrap: wrap;
 
+          padding: 1rem;
+
           a {
             text-transform: capitalize;
-            color: white;
-            background: red;
+            color: #fafafa;
+            background: #db5461;
             padding: 0.25rem 0.75rem;
             margin: 0.25rem 0.25rem 0.25rem 0;
 
@@ -44,42 +38,41 @@
 
           a:hover,
           a:focus {
-            background: white;
-            color: red;
+            background: #fafafa;
+            color: #db5461;
           }
 
         }
 
         .entry-title {
-          margin: 0 0 0.5rem 0rem;
+          margin: 0;
 
-          // padding: 0.25rem 0.75rem;
-          background: white;
-          color: red;
+          color: #fafafa;
+          background: #db5461;
 
-          border-radius: 3px;
-
+          text-align: center;
           a {
             padding: 0.25rem 0.75rem;
-            background: white;
-            color: red;
             display: block;
+            background: #db5461;
+            color: #fafafa;
             width: 100%;
           }
 
           a:hover,
           a:focus {
-            background: red;
-            color: white;
+            background: #fafafa;
+            color: #db5461;
           }
         }
 
         .entry-meta {
-          color: white;
+          color: #fafafa;
+          padding: 1rem;
 
           a {
             text-transform: capitalize;
-            color: yellow;
+            color: #e2c044;
             font-weight: 700;
           }
 
@@ -92,11 +85,47 @@
       }
 
       .entry-content {
-        color: white;
+        color: #fafafa;
+        padding: 1rem;
 
         p {
           font-size: 1.75rem;
         }
+
+      }
+
+      .entry-footer {
+        min-height: 65px;
+        padding: 1rem;
+
+        span {
+          color: #fafafa;
+          margin: 0.5rem;
+
+          a:first-child {
+            margin-left: -0.25rem;
+          }
+
+          a {
+            display: inline-block;
+            background: #e2c044;
+            color: #304151;
+            padding: 0rem 0.75rem;
+            margin: 0.25rem 0.275rem 0.25rem 0.275rem;
+
+            font-weight: 700;
+
+            border-radius: 5px;
+            text-decoration: none;
+
+          }
+
+          a:hover {
+            background: #fafafa;
+            color: #304151;
+          }
+        }
+
 
       }
     }

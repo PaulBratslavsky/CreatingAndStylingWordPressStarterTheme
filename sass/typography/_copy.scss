@@ -15,7 +15,8 @@ address {
 }
 
 pre {
-	background: $color__background-pre;
+	background: #fafafa;
+	color: #db5461;
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
@@ -36,7 +37,9 @@ abbr, acronym {
 }
 
 mark, ins {
-	background: $color__background-ins;
+	background: #fafafa;
+	color: #db5461;
+	padding: 0 0.5rem;
 	text-decoration: none;
 }
 

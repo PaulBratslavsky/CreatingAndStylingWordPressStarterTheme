@@ -12,6 +12,7 @@
 
     ul#social.menu {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       padding: 0;
       margin: 0;
@@ -25,6 +26,9 @@
           margin: 0 0.5rem;
           color: whitesmoke;
           font-size: 2rem;
+
+          display: block;
+          text-align: center;
 
         }
 

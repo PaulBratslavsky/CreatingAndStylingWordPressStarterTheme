@@ -99,10 +99,10 @@ if ( ! function_exists( 'underscoresass_entry_footer' ) ) :
 		if ( 'post' === get_post_type() ) {
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'underscoresass' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'underscoresass' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'underscoresass' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'underscoresass' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
@@ -153,3 +153,18 @@ endif;
             printf( '<span class="cat-links">' . esc_html__( '%1$s', 'underscoresass' ) . '</span>', $categories_list ); // WPCS: XSS OK.
         }
     }
+
+
+/**
+ * Post navigation (previous / next post) for single posts.
+ */
+function underscoresass_post_navigation() {
+    the_post_navigation( array(
+        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'underscoresass' ) . '</span> ' .
+            '<span class="screen-reader-text">' . __( 'Next post:', 'underscoresass' ) . '</span> ' .
+            '<span class="post-title">%title</span>',
+        'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'underscoresass' ) . '</span> ' .
+            '<span class="screen-reader-text">' . __( 'Previous post:', 'underscoresass' ) . '</span> ' .
+            '<span class="post-title">%title</span>',
+    ) );
+}
