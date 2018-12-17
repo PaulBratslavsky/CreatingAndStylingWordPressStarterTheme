@@ -38,6 +38,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+    <section class="post-content"> // more attention needed here
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -63,4 +64,6 @@
 	<footer class="entry-footer">
 		<?php underscoresass_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+    </section>
 </article><!-- #post-<?php the_ID(); ?> -->

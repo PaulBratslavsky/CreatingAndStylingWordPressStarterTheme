@@ -674,17 +674,6 @@ textarea {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-/*
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-}
-*/
 .nav-links {
   display: flex;
   flex-direction: row;
@@ -801,6 +790,61 @@ textarea {
   }
 }
 
+/*
+.site-content {
+    max-width: $size__max-width;
+    margin: 0 auto;
+
+
+}
+*/
+@media screen and (min-width: 900px) {
+  .has-sidebar .hentry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .has-sidebar .hentry .entry-header {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  .has-sidebar .hentry .post-content {
+    width: 60%;
+  }
+  .has-sidebar .hentry .widget-area {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .no-sidebar .post-content__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .no-sidebar .post-content__wrap .post-content__body {
+    width: 60%;
+  }
+  .no-sidebar .post-content__wrap .post-content__body .entry-content {
+    margin: 0;
+  }
+  .no-sidebar .post-content__wrap .post-content__body h1, .no-sidebar .post-content__wrap .post-content__body h2, .no-sidebar .post-content__wrap .post-content__body h3, .no-sidebar .post-content__wrap .post-content__body h4, .no-sidebar .post-content__wrap .post-content__body h5, .no-sidebar .post-content__wrap .post-content__body h6, .no-sidebar .post-content__wrap .post-content__body p {
+    margin-top: 0;
+  }
+  .no-sidebar .post-content__wrap .post-content__meta {
+    width: 30%;
+    padding: 0;
+  }
+  .no-sidebar .post-content__wrap .post-content__meta .post-content__image {
+    margin: 1rem;
+  }
+  .no-sidebar .post-content__wrap .post-content__meta .post-content__image img {
+    display: block;
+    object-fit: cover;
+    height: 420px;
+    width: auto;
+    border-radius: 5px;
+  }
+}
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -1037,17 +1081,20 @@ textarea {
   background: #334150;
   margin-bottom: 0;
 }
-.site-content #main article .entry-header a {
+.site-content #main article .entry-header a,
+.site-content #main article .post-content a {
   text-decoration: none;
 }
-.site-content #main article .entry-header .cat-links {
+.site-content #main article .entry-header .cat-links,
+.site-content #main article .post-content .cat-links {
   font-size: 90%;
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
 }
-.site-content #main article .entry-header .cat-links a {
+.site-content #main article .entry-header .cat-links a,
+.site-content #main article .post-content .cat-links a {
   text-transform: capitalize;
   color: #fafafa;
   background: #db5461;
@@ -1057,17 +1104,21 @@ textarea {
   border-top-right-radius: 5px;
 }
 .site-content #main article .entry-header .cat-links a:hover,
-.site-content #main article .entry-header .cat-links a:focus {
+.site-content #main article .entry-header .cat-links a:focus,
+.site-content #main article .post-content .cat-links a:hover,
+.site-content #main article .post-content .cat-links a:focus {
   background: #fafafa;
   color: #db5461;
 }
-.site-content #main article .entry-header .entry-title {
+.site-content #main article .entry-header .entry-title,
+.site-content #main article .post-content .entry-title {
   margin: 0;
   color: #fafafa;
   background: #db5461;
   text-align: center;
 }
-.site-content #main article .entry-header .entry-title a {
+.site-content #main article .entry-header .entry-title a,
+.site-content #main article .post-content .entry-title a {
   padding: 0.25rem 0.75rem;
   display: block;
   background: #db5461;
@@ -1075,21 +1126,27 @@ textarea {
   width: 100%;
 }
 .site-content #main article .entry-header .entry-title a:hover,
-.site-content #main article .entry-header .entry-title a:focus {
+.site-content #main article .entry-header .entry-title a:focus,
+.site-content #main article .post-content .entry-title a:hover,
+.site-content #main article .post-content .entry-title a:focus {
   background: #fafafa;
   color: #db5461;
 }
-.site-content #main article .entry-header .entry-meta {
+.site-content #main article .entry-header .entry-meta,
+.site-content #main article .post-content .entry-meta {
   color: #fafafa;
   padding: 1rem;
 }
-.site-content #main article .entry-header .entry-meta a {
+.site-content #main article .entry-header .entry-meta a,
+.site-content #main article .post-content .entry-meta a {
   text-transform: capitalize;
   color: #e2c044;
   font-weight: 700;
 }
 .site-content #main article .entry-header .entry-meta a:hover,
-.site-content #main article .entry-header .entry-meta a:focus {
+.site-content #main article .entry-header .entry-meta a:focus,
+.site-content #main article .post-content .entry-meta a:hover,
+.site-content #main article .post-content .entry-meta a:focus {
   color: #f3ff6f;
   text-decoration: underline;
 }
