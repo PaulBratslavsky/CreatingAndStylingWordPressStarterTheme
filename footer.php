@@ -13,6 +13,7 @@
 
 	</div><!-- #content -->
 
+
 	<footer id="colophon" class="site-footer">
             <?php
             wp_nav_menu( array(
@@ -20,6 +21,10 @@
                 'menu_id'        => 'social',
             ) );
             ?>
+
+        <?php get_sidebar('footer'); ?>
+
+
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscoresass' ) ); ?>">
 				<?php
@@ -33,6 +38,8 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscoresass' ), 'underscoresass', '<a href="http://paulbratslavsky.com">Paul Bratslavsky</a>' );
 				?>
 		</div><!-- .site-info -->
+
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -23,8 +23,10 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-
+        <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
             <?php underscoresass_post_thumbnail(); ?>
+        </a>
+
 
             <?php underscoresass_display_category(); // User created function to display category ?>
 
@@ -41,25 +43,34 @@
     <section class="post-content"> // more attention needed here
 	<div class="entry-content">
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscoresass' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'underscoresass' ),
-			'after'  => '</div>',
-		) );
+		the_excerpt();
+
 		?>
 	</div><!-- .entry-content -->
+
+        <?php
+
+            $read_more_link = sprintf(
+			    wp_kses(
+				    /* translators: %s: Name of current post. Only visible to screen readers */
+				    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'underscoresass' ),
+				    array(
+					    'span' => array(
+						'class' => array(),
+					    ),
+				    )
+			    ),
+			    get_the_title()
+		    );
+
+        ?>
+
+        <div class="continue-reading">
+            <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+                <?php echo $read_more_link; ?>
+            </a>
+        </div>
 
 	<footer class="entry-footer">
 		<?php underscoresass_entry_footer(); ?>

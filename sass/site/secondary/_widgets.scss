@@ -1,8 +1,25 @@
-.widget {
+.widget-area {
 	margin: 0 0 1.5em;
 
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
+	}
+
+	// padding: 1rem;
+	margin: 1rem 0.5rem;
+
+	.widget {
+		background: #fafafa;
+		padding: 1rem;
+
+		border-radius: 15px;
+
+		margin: 0 0 2rem 0;
+
+		.widget-title {
+			margin: 0;
+			padding: 0.5rem 1rem;
+		}
 	}
 }

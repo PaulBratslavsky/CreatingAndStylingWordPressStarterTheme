@@ -168,3 +168,25 @@ function underscoresass_post_navigation() {
             '<span class="post-title">%title</span>',
     ) );
 }
+
+/**
+ * Read more excerpt thingy
+ */
+
+function underscores_excerpt_more ( $more ) {
+
+    return "...";
+}
+
+add_filter( 'excerpt_more', 'underscores_excerpt_more' );
+
+/**
+ * Read more excerpt thingy
+ */
+
+function underscores_excerpt_length ( $lenght ) {
+
+    return 100;
+}
+
+add_filter( 'excerpt_length', 'underscores_excerpt_length' );

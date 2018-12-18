@@ -1,0 +1,26 @@
+.archive-view {
+   article.hentry {
+     background: blue;
+   }
+}
+
+
+@media screen and ( min-width: $query__medium ) {
+  .site-content {
+      display: flex;
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      .content-area {
+        min-width: 68.5%;
+        flex: 1 0;
+      }
+
+      .widget-area {
+        min-width: 30%;
+        flex: 1 0;
+      }
+
+  }
+}

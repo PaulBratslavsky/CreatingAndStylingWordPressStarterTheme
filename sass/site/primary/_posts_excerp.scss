@@ -1,15 +1,19 @@
 .site-content {
   padding: 0;
 
-  #main {
-    background: #f0f2f9;
+  .site-main {
+
     display: flex;
     flex-direction: column;
     // flex-flow: wrap;
 
-    article {
+    .hentry {
       background: #334150;
       margin-bottom: 0;
+
+      .post {
+        background: #e08026;
+      }
 
       .entry-header,
       .post-content {
