@@ -42,18 +42,19 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
-           // the_posts_pagination();
+            // the_posts_navigation();
+            // the_posts_pagination();
 
-            /*
-                $pagination = get_the_posts_pagination( array(
-                    'mid_size' => 2,
-                    'prev_text' => __( 'Newer', 'textdomain' ),
-                    'next_text' => __( 'Older', 'textdomain' ),
-                ) );
 
-*/
-             echo "Where is this";
+            $pagination = the_posts_pagination( array(
+                'prev_text' => underscoresass_get_svg( array( 'icon' => 'arrow-long-left', 'fallback' => true ) ) . __( 'Newer', 'underscoresass' ),
+                'next_text' => __( 'Older', 'underscoresass' ) . underscoresass_get_svg( array( 'icon' => 'arrow-long-right' , 'fallback' => true ) ),
+                'before_page_number' => '<span class="screen-reader-text">' . __( 'Page ', 'underscoresass' ) . '</span>',
+            ));
+
+            echo $pagination;
+
+
 
 
 		else :

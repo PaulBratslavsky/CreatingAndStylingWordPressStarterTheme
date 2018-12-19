@@ -703,6 +703,32 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+## Pagination
+--------------------------------------------------------------*/
+.pagination .nav-links {
+  padding: 2rem;
+  margin: 0;
+  height: 65px;
+  background: pink;
+}
+.pagination .nav-links a {
+  color: #000e14;
+}
+.pagination .nav-links a:visited {
+  color: blue;
+}
+.pagination .nav-links span {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  color: red;
+}
+
+/*--------------------------------------------------------------
 ## Header Menu
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1219,6 +1245,14 @@ textarea {
   background: blue;
 }
 
+h1.page-title {
+  margin: 0;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: orange;
+  color: #304151;
+}
+
 @media screen and (min-width: 900px) {
   .site-content {
     display: flex;
@@ -1519,6 +1553,49 @@ object {
 --------------------------------------------------------------*/
 .size-full {
   width: 100vw;
+}
+
+/*--------------------------------------------------------------
+## Icons
+--------------------------------------------------------------*/
+/* SVG Icons base styles */
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  position: relative;
+  /* Align more nicely with capital letters */
+  top: -0.0625em;
+  vertical-align: middle;
+  width: 1em;
+}
+
+/*--------------------------------------------------------------
+SVG Fallbacks
+--------------------------------------------------------------*/
+.svg-fallback {
+  display: none;
+}
+
+.no-svg .svg-fallback {
+  display: inline-block;
+}
+
+/* Social Menu fallbacks */
+.no-svg .social-menu a {
+  height: auto;
+  width: auto;
+}
+
+.no-svg .social-menu li a .screen-reader-text {
+  clip: auto;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  height: auto;
+  position: relative !important;
+  /* overrides previous !important styles */
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

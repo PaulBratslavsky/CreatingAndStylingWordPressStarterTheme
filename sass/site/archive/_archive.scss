@@ -4,6 +4,15 @@
    }
 }
 
+h1.page-title {
+  margin: 0;
+  padding: 3rem 2rem;
+
+  text-align: center;
+
+  background: orange; // orange looks better then #e2c044
+  color: #304151;
+}
 
 @media screen and ( min-width: $query__medium ) {
   .site-content {

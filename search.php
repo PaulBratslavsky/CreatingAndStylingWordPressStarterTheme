@@ -34,11 +34,17 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content' );
 
 			endwhile;
 
-			the_posts_navigation();
+            $pagination = get_the_posts_pagination( array(
+                'mid_size' => 2,
+                'prev_text' => __( 'Newer', 'underscoresass' ),
+                'next_text' => __( 'Older', 'underscoresass' ),
+            ) );
+
+            echo $pagination;
 
 		else :
 
